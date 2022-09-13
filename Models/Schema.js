@@ -3,11 +3,10 @@ const validator = require("validator");
 
 // Schema for Posts
 const postSchema = new Schema({
-  userId: {type: String, required: true, unique: true},
+  userId: { type: String, required: true, unique: true },
   title: { type: String, required: true },
   body: { type: String, required: true },
 });
-
 
 // Schema for Comments
 const commentSchema = new Schema({
@@ -25,7 +24,6 @@ const commentSchema = new Schema({
   },
   body: { type: String, required: true },
 });
-
 
 const post = model("post", postSchema);
 const comment = model("comment", commentSchema);
